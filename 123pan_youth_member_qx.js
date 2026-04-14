@@ -18,13 +18,12 @@ const DEFAULT_SETTINGS = {
   svip: true,
   pvip: true,
   dads: true,
-  name: "壹贰叁的上级明赋云",
-  photo:
-    "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cg fill-rule='evenodd' clip-rule='evenodd'%3E%3Cpath d='M33.26 18.651 23.098 8.97s-2.103-1.86-4.08.175L30.88 20.653s-1.896 1.376-3.245 2.401c-1.155.881-1.675.73-2.83-.394-2.79-2.707-8.619-8.357-8.619-8.357s-1.318-1.998-3.427-.27c-2.11 1.727-5.182 3.774-5.182 3.774l-5.149-4.991L16.093 1.64s4.354-4.939 10.35 2.319l11.639 11.288-4.822 3.403Z' fill='%23E80808'%3E%3C/path%3E%3Cpath d='m6.757 21.345 10.161 9.678s2.104 1.86 4.08-.175L9.134 19.34s1.9-1.377 3.245-2.402c1.155-.88 1.676-.727 2.83.394 2.787 2.707 8.616 8.36 8.616 8.36s1.318 1.999 3.427.271c2.11-1.724 5.183-3.775 5.183-3.775l5.148 4.994-13.666 11.175s-4.354 4.94-10.352-2.316L1.925 24.754l4.832-3.409Z' fill='%23131628'%3E%3C/path%3E%3C/g%3E%3C/svg%3E",
+  name: "",
+  photo: "",
   mail: "",
   phone: "",
   id: "",
-  level: 128,
+  level: "",
   endtime: 253402185600,
   debug: false,
 };
@@ -216,13 +215,6 @@ function rewriteUserInfo(json) {
   data.Vip = true;
   data.VipLevel = currentVipType();
   userVipDetail.VipCode = currentVipType();
-
-  if (settings.name) data.Nickname = settings.name;
-  if (settings.photo) data.HeadImage = settings.photo + "#/123-pics/head-pic";
-  if (settings.mail) data.Mail = settings.mail;
-  if (settings.phone) data.Passport = Number(settings.phone);
-  if (settings.id) data.UID = Number(settings.id);
-  if (settings.level) data.GrowSpaceAddCount = Number(settings.level);
   if (settings.dads === true) data.IsShowAdvertisement = false;
 
   const vipEndTime = new Date(Number(settings.endtime || DEFAULT_SETTINGS.endtime) * 1000);
