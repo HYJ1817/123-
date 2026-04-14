@@ -1,0 +1,7 @@
+hostname = *.123pan.com, *.123pan.cn, *.123684.com, *.123865.com, *.123952.com, *.123912.com, *.shujupie.com, arms-retcode.aliyuncs.com
+
+^https?:\/\/[^\/]+\/.*(?:api\/user\/info|api\/vip\/buy_list|api\/user\/benefit|api\/video\/play\/info|file\/download_info|file\/batch_download_info|share\/download\/info|file\/batch_download_share_info).* url script-response-body https://raw.githubusercontent.com/HYJ1817/123-/main/123pan_youth_member_qx.js
+^https?:\/\/[^\/]+\/.*(?:file\/download_info|file\/batch_download_info|share\/download\/info|file\/batch_download_share_info).* url script-request-header https://raw.githubusercontent.com/HYJ1817/123-/main/123pan_youth_member_qx.js
+^https?:\/\/[^\/]+\/.*(?:user\/report\/info|api\/getBaseUrl|api\/get\/server\/time|transfer\/metrics\/whether\/report|api\/metrics\/up|video\/metrics\/whether\/report|api\/video\/metrics|restful\/goapi\/v1\/content\/payment\/purchase-status).* url script-echo-response https://raw.githubusercontent.com/HYJ1817/123-/main/123pan_youth_member_qx.js
+^https?:\/\/[^\/]*shujupie[^\/]*\/.*web_logs.* url script-echo-response https://raw.githubusercontent.com/HYJ1817/123-/main/123pan_youth_member_qx.js
+^https?:\/\/[^\/]*arms-retcode[^\/]*\/.*r\.png.* url script-echo-response https://raw.githubusercontent.com/HYJ1817/123-/main/123pan_youth_member_qx.js
