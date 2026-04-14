@@ -1,0 +1,4 @@
+# 这是 Quantumult X 主配置里的示例写法。
+# 把下面链接替换成你自己的 raw GitHub 链接，然后加到 [rewrite_remote]。
+
+https://raw.githubusercontent.com/<GITHUB_USER>/<REPO>/<BRANCH>/123pan_youth_member_qx_remote.snippet, tag=123pan Youth Member, enabled=true
